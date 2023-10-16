@@ -7,14 +7,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 public class Check {
 	public WebDriver driver;
-
 	@Test
 	public void m2() throws InterruptedException {
 	driver = new ChromeDriver();
 	System.setProperty("webdriver.chrome.driver","./driver.chromedriver");
-	
-	
-	
 	driver.get("https://www.grammarly.com/signin");
 	
 	driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("amitkumar0126@gmail.com");
@@ -53,12 +49,10 @@ public class Check {
 
 
 }
+	
 	@AfterTest
 	public void teardown() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.quit();
 	}
-	
-	
-
 }

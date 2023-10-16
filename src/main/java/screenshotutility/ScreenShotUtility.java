@@ -1,5 +1,6 @@
 package screenshotutility;
 import java.io.File;
+import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -9,25 +10,31 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import baselibrary.BaseLibrary;
 
-public class ScreenShotUtility extends BaseLibrary{
-	 static public WebDriver driver;
-	
-
-		
-		public static void getscreenshot(String foldername,String filename)  throws Exception {
+public class ScreenShotUtility {		
+		public static void getscreenshot(WebDriver driver,String foldername,String filename)  throws Exception {
 				//Convert web driver object to TakeScreenshot
-			String loc = System.getProperty("./screenshot");
+		
+			String loc ="./screenshot/";
+			System.out.println(loc+foldername+"-"+filename+".jpeg");
 			try {
+			//	static WebDriver driver;
 				
-				TakesScreenshot scrShot =((TakesScreenshot)driver);
-				//Call getScreenshotAs method to create image file
-				File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-				//Move image file to new destination
-				File DestFile=new File(loc+"/"+foldername+"/"+filename+".jpeg");
-				System.out.println(DestFile);
-				//Copy file at destination
-				FileUtils.copyFile(SrcFile, DestFile);
+				File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(file, new File("./screenshot/"+"/"+foldername+"-"+filename+".jpeg"));
 				}
+				 catch (Exception e) {
+						System.out.println("Issue in Getscreenshots "+e);
+				} 																									}
+}
+				
+//				TakesScreenshot scrShot =((TakesScreenshot)driver);
+//				//Call getScreenshotAs method to create image file
+//				File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+//				//Move image file to new destination
+//				File DestFile=new File(loc+"/"+foldername+"/"+filename+".jpeg");
+//				System.out.println(DestFile);
+//				//Copy file at destination
+//				FileUtils.copyFile(SrcFile, DestFile);
 //			String loc = System.getProperty("./screenshot");
 //			try {
 //				String path=loc+"/"+foldername+""+filename+".jpeg";
@@ -54,12 +61,6 @@ public class ScreenShotUtility extends BaseLibrary{
 //			
 //				FileUtils.copyFile(srcFile,new File(path));
 //				}
-		 catch (Exception e) {
-		System.out.println("Issue in Getscreenshots "+e);
-		}
-		}
-		
-		
-	}
+
 
 

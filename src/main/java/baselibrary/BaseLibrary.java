@@ -1,57 +1,48 @@
 package baselibrary;
 
 import java.time.Duration;
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-
-import com.beust.jcommander.Parameters;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import prpertyutility.propertyutils;
 import screenshotutility.ScreenShotUtility;
-
 public class BaseLibrary {
 	public static String urlpath=propertyutils.getreaddata("url","./testdata/config.properties");
-	 public static WebDriver driver;
-	 
-	
- @BeforeMethod
- @Parameters("browser")
-public  void browser(String browser) {
+	static public WebDriver driver;
 
-	
-// String brow=propertyutils.getreaddata("browser","./testdata/config.properties");
-
-
-if(browser.equals("chrome"))
-	{
-WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
-	System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
-	}
-else if(browser.equals("safari"))
-{
-WebDriverManager.safaridriver().setup();
-driver = new SafariDriver();
-}
-	
-
-else
-	{
-	System.out.println("Please provide a proper browser value..");
-	}
-
-
-	driver.get(urlpath);
+	@BeforeMethod
+	@Parameters("browser")	
+	public  void browser(String browser) {
+	//browser=propertyutils.getreaddata("browser","./testdata/config.properties");
+ 		if(browser.equals("chrome"))
+ 		{
+ 			WebDriverManager.chromedriver().setup();
+ 			driver = new ChromeDriver();
+ 			System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
+ 		}
+		else if(browser.equals("safari"))
+		{
+			WebDriverManager.safaridriver().setup();
+			driver = new SafariDriver();
+		}
+		else if(browser.equals("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		else
+		{
+			System.out.println("Please provide a proper browser value..");
+		}
+ 	driver.get(urlpath);
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 }
@@ -69,17 +60,16 @@ System.out.println(result.getStatus());
 System.out.println(ITestResult.FAILURE);
 	if(result.isSuccess())
 	{
-		ScreenShotUtility.getscreenshot("Passed",name);
+		ScreenShotUtility.getscreenshot(driver,"Passed",name);
 	}
 	else if(result.getStatus()==ITestResult.FAILURE)
 	{
-		ScreenShotUtility.getscreenshot("Failed",name);
+		ScreenShotUtility.getscreenshot(driver,"Failed",name);
 	}
 }
-
-@AfterTest
+@AfterMethod(dependsOnMethods="getresultanalysis")
 public void teardown() {
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+	//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	driver.quit();
 }
 }

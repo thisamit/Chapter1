@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="6" ignored="0" total="10" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="0" skipped="2">
   <reporter-output>
     <line>
       <![CDATA[Pass]]>
@@ -13,43 +13,32 @@
     <line>
       <![CDATA[Pass]]>
     </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
-    <line>
-      <![CDATA[Pass]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-10-03T12:40:38 IST" name="Suite" finished-at="2023-10-03T12:43:08 IST" duration-ms="149817">
+  <suite started-at="2023-10-16T13:24:40 IST" name="Suite" finished-at="2023-10-16T13:25:40 IST" duration-ms="59911">
     <groups>
     </groups>
-    <test started-at="2023-10-03T12:40:38 IST" name="Test1" finished-at="2023-10-03T12:43:08 IST" duration-ms="149817">
+    <test started-at="2023-10-16T13:24:40 IST" name="Test Grammerly On Chrome" finished-at="2023-10-16T13:25:18 IST" duration-ms="38038">
       <class name="TestClass.TestProp">
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:40:38 IST" name="runbrow" finished-at="2023-10-03T12:40:52 IST" duration-ms="13859" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method signature="run()[pri:1, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:40:52 IST" name="run" finished-at="2023-10-03T12:40:53 IST" duration-ms="1340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:40:53 IST" name="getresultanalysis" finished-at="2023-10-03T12:40:53 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:24:40 IST" name="browser" finished-at="2023-10-16T13:25:14 IST" duration-ms="33185" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@7f0eb4b4] output={null}]]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="run()[pri:1, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:14 IST" name="run" finished-at="2023-10-16T13:25:16 IST" duration-ms="2245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:16 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:16 IST" duration-ms="446" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@5f058f00] output={null}]]]>
               </value>
             </param>
           </params>
@@ -59,26 +48,41 @@
             </line>
           </reporter-output>
         </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:40:53 IST" name="runbrow" finished-at="2023-10-03T12:41:09 IST" duration-ms="15641" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:09 IST" name="check" finished-at="2023-10-03T12:41:15 IST" duration-ms="6058" status="SKIP">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:16 IST" name="teardown" finished-at="2023-10-16T13:25:18 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="1573" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+              <![CDATA[Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:437)
+at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:392)
+at baselibrary.BaseLibrary.teardown(BaseLibrary.java:73)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
@@ -95,244 +99,113 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:15 IST" name="getresultanalysis" finished-at="2023-10-03T12:41:15 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@7f0eb4b4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:15 IST" name="runbrow" finished-at="2023-10-03T12:41:42 IST" duration-ms="26664" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:42 IST" name="check" finished-at="2023-10-03T12:41:48 IST" duration-ms="6010" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: The driver server has unexpectedly died!
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: driver.version: unknown
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+... 31 more
+Caused by: org.openqa.selenium.WebDriverException: The driver server has unexpectedly died!
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: driver.version: unknown
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:137)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+... 3 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)
+... 4 more
+Caused by: java.net.ConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
+at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
+at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
+at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
+at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+Caused by: java.net.ConnectException: Connection refused
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:48 IST" name="getresultanalysis" finished-at="2023-10-03T12:41:48 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@7f0eb4b4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:41:48 IST" name="runbrow" finished-at="2023-10-03T12:42:15 IST" duration-ms="26738" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:42:15 IST" name="check" finished-at="2023-10-03T12:42:21 IST" duration-ms="6011" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:42:21 IST" name="getresultanalysis" finished-at="2023-10-03T12:42:21 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@7f0eb4b4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:42:21 IST" name="runbrow" finished-at="2023-10-03T12:43:02 IST" duration-ms="40938" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method signature="check()[pri:2, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:43:02 IST" name="check" finished-at="2023-10-03T12:43:08 IST" duration-ms="6009" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:43:08 IST" name="getresultanalysis" finished-at="2023-10-03T12:43:08 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=FAILURE method=TestProp.check()[pri:2, instance:TestClass.TestProp@7f0eb4b4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@7f0eb4b4]" started-at="2023-10-03T12:43:08 IST" name="teardown" finished-at="2023-10-03T12:43:08 IST" duration-ms="418" status="PASS">
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- TestClass.TestProp -->
-    </test> <!-- Test1 -->
-    <test started-at="2023-10-03T12:40:38 IST" name="Test" finished-at="2023-10-03T12:43:08 IST" duration-ms="149817">
-      <class name="TestClass.TestProp">
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:40:38 IST" name="runbrow" finished-at="2023-10-03T12:40:52 IST" duration-ms="13858" status="PASS">
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:18 IST" name="browser" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method signature="run()[pri:1, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:40:52 IST" name="run" finished-at="2023-10-03T12:40:53 IST" duration-ms="1340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:40:53 IST" name="getresultanalysis" finished-at="2023-10-03T12:40:53 IST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@74e52303] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:40:53 IST" name="runbrow" finished-at="2023-10-03T12:41:09 IST" duration-ms="15644" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:09 IST" name="check" finished-at="2023-10-03T12:41:15 IST" duration-ms="6056" status="SKIP">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- browser -->
+        <test-method signature="check()[pri:2, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:18 IST" name="check" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+              <![CDATA[Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:437)
+at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:392)
+at baselibrary.BaseLibrary.teardown(BaseLibrary.java:73)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
@@ -349,199 +222,374 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:15 IST" name="getresultanalysis" finished-at="2023-10-03T12:41:15 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@74e52303] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:15 IST" name="runbrow" finished-at="2023-10-03T12:41:42 IST" duration-ms="26652" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:42 IST" name="check" finished-at="2023-10-03T12:41:48 IST" duration-ms="6014" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: The driver server has unexpectedly died!
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: driver.version: unknown
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+... 31 more
+Caused by: org.openqa.selenium.WebDriverException: The driver server has unexpectedly died!
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: driver.version: unknown
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:137)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+... 3 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)
+... 4 more
+Caused by: java.net.ConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
+at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
+at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
+at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
+at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/[0:0:0:0:0:0:0:1]:7159
+Caused by: java.net.ConnectException: Connection refused
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:48 IST" name="getresultanalysis" finished-at="2023-10-03T12:41:48 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@74e52303] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:18 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
           <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
           </reporter-output>
         </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:41:48 IST" name="runbrow" finished-at="2023-10-03T12:42:15 IST" duration-ms="26728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method retried="true" signature="check()[pri:2, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:42:15 IST" name="check" finished-at="2023-10-03T12:42:21 IST" duration-ms="6019" status="SKIP">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:42:21 IST" name="getresultanalysis" finished-at="2023-10-03T12:42:21 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=SKIP method=TestProp.check()[pri:2, instance:TestClass.TestProp@74e52303] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="runbrow()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:42:21 IST" name="runbrow" finished-at="2023-10-03T12:43:02 IST" duration-ms="40929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runbrow -->
-        <test-method signature="check()[pri:2, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:43:02 IST" name="check" finished-at="2023-10-03T12:43:08 IST" duration-ms="6004" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at Page.Grammerly_Page.sendemail(Grammerly_Page.java:41)
-at TestClass.TestProp.check(TestProp.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check -->
-        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:43:08 IST" name="getresultanalysis" finished-at="2023-10-03T12:43:08 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=check status=FAILURE method=TestProp.check()[pri:2, instance:TestClass.TestProp@74e52303] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Pass]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- getresultanalysis -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@74e52303]" started-at="2023-10-03T12:43:08 IST" name="teardown" finished-at="2023-10-03T12:43:08 IST" duration-ms="430" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@5f058f00]" started-at="2023-10-16T13:25:18 IST" name="teardown" finished-at="2023-10-16T13:25:18 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- TestClass.TestProp -->
-    </test> <!-- Test -->
+    </test> <!-- Test Grammerly On Chrome -->
+    <test started-at="2023-10-16T13:24:40 IST" name="Test Grammerly On Safari" finished-at="2023-10-16T13:25:18 IST" duration-ms="37999">
+      <class name="TestClass.TestProp">
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:24:41 IST" name="browser" finished-at="2023-10-16T13:25:14 IST" duration-ms="32864" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="run()[pri:1, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:14 IST" name="run" finished-at="2023-10-16T13:25:16 IST" duration-ms="2247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:16 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:16 IST" duration-ms="432" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@1bd4fdd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getresultanalysis -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:16 IST" name="teardown" finished-at="2023-10-16T13:25:18 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="1765" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:437)
+at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:392)
+at baselibrary.BaseLibrary.teardown(BaseLibrary.java:73)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+... 31 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+... 3 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:18 IST" name="browser" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="check()[pri:2, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:18 IST" name="check" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '21'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dcb3f2d5-5f10-4106-affb-4687f2d8fc8d, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:16861, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 5953, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:16861/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcb3f2d5-5f10-4106-affb-4687f2d8fc8d
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:437)
+at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:392)
+at baselibrary.BaseLibrary.teardown(BaseLibrary.java:73)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+... 31 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+... 3 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+... 1 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check -->
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:18 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:18 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getresultanalysis -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@1bd4fdd]" started-at="2023-10-16T13:25:18 IST" name="teardown" finished-at="2023-10-16T13:25:18 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestClass.TestProp -->
+    </test> <!-- Test Grammerly On Safari -->
+    <test started-at="2023-10-16T13:24:40 IST" name="Test Grammerly On firefox" finished-at="2023-10-16T13:25:40 IST" duration-ms="59873">
+      <class name="TestClass.TestProp">
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:24:40 IST" name="browser" finished-at="2023-10-16T13:25:14 IST" duration-ms="33192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="run()[pri:1, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:14 IST" name="run" finished-at="2023-10-16T13:25:16 IST" duration-ms="2239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:16 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:16 IST" duration-ms="388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@6cf0e0ba] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getresultanalysis -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:16 IST" name="teardown" finished-at="2023-10-16T13:25:18 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="1836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="browser(java.lang.String)[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:18 IST" name="browser" finished-at="2023-10-16T13:25:31 IST" duration-ms="12855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browser -->
+        <test-method signature="check()[pri:2, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:31 IST" name="check" finished-at="2023-10-16T13:25:38 IST" duration-ms="7454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check -->
+        <test-method is-config="true" signature="getresultanalysis(org.testng.ITestResult)[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:38 IST" name="getresultanalysis" finished-at="2023-10-16T13:25:38 IST" duration-ms="130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=check status=SUCCESS method=TestProp.check()[pri:2, instance:TestClass.TestProp@6cf0e0ba] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Pass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getresultanalysis -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestClass.TestProp@6cf0e0ba]" started-at="2023-10-16T13:25:38 IST" name="teardown" finished-at="2023-10-16T13:25:40 IST" depends-on-methods="baselibrary.BaseLibrary.getresultanalysis" duration-ms="1440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestClass.TestProp -->
+    </test> <!-- Test Grammerly On firefox -->
   </suite> <!-- Suite -->
 </testng-results>

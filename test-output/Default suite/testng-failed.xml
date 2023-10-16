@@ -7,7 +7,7 @@
         <methods>
           <include name="teardown"/>
           <include name="getresultanalysis"/>
-          <include name="runbrow"/>
+          <include name="browser"/>
           <include name="check"/>
         </methods>
       </class> <!-- TestClass.TestProp -->
