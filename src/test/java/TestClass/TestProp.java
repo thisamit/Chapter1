@@ -1,21 +1,12 @@
 package TestClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameters;
-
-import org.openqa.selenium.WebDriver;
 import Page.Grammerly_Page;
 import baselibrary.BaseLibrary;
 import excelutility.getreaddata;
 import retryattempts.RetryAnalyser;
 public class TestProp extends BaseLibrary{
-	//  public WebDriver driver;
-
 	  Grammerly_Page raku;
 	  TestProp tp;
-	
-	
 	@Test(priority=1,retryAnalyzer = RetryAnalyser.class)
 	public void run() {
 		System.out.println(getreaddata.getExcedata("./testdata/testdata.xlsx",1,1));
