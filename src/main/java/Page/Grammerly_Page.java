@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import baselibrary.BaseLibrary;
 
-public class Grammerly_Page{
-	 public static WebDriver driver;
+public class Grammerly_Page extends BaseLibrary{
+	// public static WebDriver driver;
 
 //	By email=By.xpath("//input[@id=\"email\"]");
 
@@ -30,10 +30,11 @@ public class Grammerly_Page{
 	@FindBy(xpath="//button[@type=\"submit\"]")
 	WebElement con; 
 
-		public Grammerly_Page(WebDriver d) {
-		   driver=d;
+		public Grammerly_Page() {
+		   //driver=d;
 			PageFactory.initElements(driver,this);
 		}
+		
 		public void sendemail() {
 			//driver.findElement(email).sendKeys("amitkumar0126@gmail.com");
 		email.sendKeys("amitkumar0126@gmail.com");

@@ -8,7 +8,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,16 +19,16 @@ import screenshotutility.ScreenShotUtility;
 public class BaseLibrary {
 	public static String urlpath=propertyutils.getreaddata("url","./testdata/config.properties");
 	static public WebDriver driver;
+	static public String browser;
 
-	@BeforeMethod
+	@BeforeTest
 	@Parameters("browser")	
 	public  void browser(String browser) {
-	//browser=propertyutils.getreaddata("browser","./testdata/config.properties");
+		this.browser=browser;
  		if(browser.equals("chrome"))
  		{
  			WebDriverManager.chromedriver().setup();
  			driver = new ChromeDriver();
- 			System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
  		}
 		else if(browser.equals("safari"))
 		{
@@ -42,9 +44,12 @@ public class BaseLibrary {
 		{
 			System.out.println("Please provide a proper browser value..");
 		}
- 	driver.get(urlpath);
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+ 		driver.manage().window().maximize();
+ 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+ 		
+ 		driver.get(urlpath);
+ 	
+
 }
  
 
@@ -60,17 +65,21 @@ System.out.println(result.getStatus());
 System.out.println(ITestResult.FAILURE);
 	if(result.isSuccess())
 	{
-		ScreenShotUtility.getscreenshot(driver,"Passed",name);
+		ScreenShotUtility.getscreenshot(driver,browser+"/"+"Passed",name);
 	}
 	else if(result.getStatus()==ITestResult.FAILURE)
 	{
-		ScreenShotUtility.getscreenshot(driver,"Failed",name);
+		ScreenShotUtility.getscreenshot(driver,browser+"/"+"Failed",name);
 	}
 }
-@AfterMethod(dependsOnMethods="getresultanalysis")
-public void teardown() {
+@AfterTest()
+
+public void teardown() throws InterruptedException {
+	Thread.sleep(2000);
+	System.out.println(driver.getTitle());
 	//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-	driver.quit();
+
+    driver.quit();
 }
 }
 
