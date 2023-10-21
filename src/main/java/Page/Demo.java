@@ -9,11 +9,15 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Demo {
 	
@@ -52,9 +56,14 @@ public class Demo {
 
 
 	
-	
+//WebElement s=driver.findElement(By.xpath("//select[@title=\"Search in\"]"));
+//		
+//		Thread.sleep(1000);
+//		
+//		Select s1=new Select(s);
+//		s1.selectByValue("Amazon Fashion");
 			
-		
+		WebDriverManager.safaridriver().setup();
 		WebDriver driver=new SafariDriver();
 		driver.get("https://www.industrybuying.com/");
 		Thread.sleep(1000);
@@ -65,20 +74,26 @@ public class Demo {
 		driver.findElement(By.xpath("//button[text()=\"No thanks\"]")).click();
 		ArrayList<String>elm=new ArrayList<String>();
 		List<WebElement> industry = driver.findElements(By.xpath("//span[@id=\"search_concept\"]//following::li[@class=\"AH_SearchCat\"]"));
-
-        System.out.println(industry.size());
-        
+		 
         for(int i=0;i<=industry.size()-1;i++) {
         	elm.add(industry.get(i).getText());
-        	//System.out.println(elm.get(i));
+        	System.out.print(elm.get(i));
         	
         } 
+        
+      
+        
         System.out.print(elm);
         for(int i=industry.size()-1;i>=0;i--) {
         	if(industry.get(i).getText().equalsIgnoreCase(elm.get(i))) {
+        		System.out.print(industry.get(i).getText());
         		Assert.assertEquals(industry.get(i).getText(), elm.get(i));
+        		
         	}
         }
+		
+  
+       
 //        Collections.reverse(elm);
 //        System.out.print(elm);
         driver.quit(); 

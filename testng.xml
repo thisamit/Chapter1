@@ -4,19 +4,21 @@
 <listeners>
 <listener class-name="ExtentReportUtillity.ExtentListenerClass"></listener>
 </listeners>
+
   <test name="Test Grammerly On Chrome">
   <parameter name="browser" value="chrome"/>
     <classes>
      <class name="TestClass.TestProp"/>
     </classes>
     </test> <!-- Test -->
-     
+    
    <test name="Test Grammerly On Safari">
       <parameter name="browser" value="safari"/>
     <classes>
        <class name="TestClass.TestProp"/> 
     </classes>
   </test> <!-- Test -->
+  
   <test name="Test Grammerly On firefox">
       <parameter name="browser" value="firefox"/>
     <classes>

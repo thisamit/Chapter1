@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,31 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,  3 skipped,  3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="run">run</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -128,6 +104,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="run">run</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -152,105 +143,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">TestClass.TestProp</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="check">
-                  </a> <!-- check -->
-                  <span class="method-name">check</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The Safari instance is already paired with another WebDriver session. 
-Host info: host: &apos;Macs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.11&apos;
-Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
-Capabilities {browserName: safari}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:83)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:79)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:56)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
-	at baselibrary.BaseLibrary.browser(BaseLibrary.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="check">
-                  </a> <!-- check -->
-                  <span class="method-name">check</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:2040, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 2142, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:2040/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1062)
-	at baselibrary.BaseLibrary.browser(BaseLibrary.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 118.0.2, moz:accessibilityChecks: false, moz:buildID: 20231009140911, moz:debuggerAddress: 127.0.0.1:2040, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 19.6.0, moz:processID: 2142, moz:profile: /var/folders/n5/8_wzkl796_n..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:2040/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1062)
-	at baselibrary.BaseLibrary.browser(BaseLibrary.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -262,6 +154,27 @@ Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 1
                   <a name="check">
                   </a> <!-- check -->
                   <span class="method-name">check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check">
+                  </a> <!-- check -->
+                  <span class="method-name">check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check">
+                  </a> <!-- check -->
+                  <span class="method-name">check</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="run">
+                  </a> <!-- run -->
+                  <span class="method-name">run</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -358,32 +271,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'check')
 data.setCell(0, 2, 'TestClass.TestProp')
-data.setCell(0, 3, 7275);
+data.setCell(0, 3, 7385);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'run')
 data.setCell(1, 2, 'TestClass.TestProp')
-data.setCell(1, 3, 3440);
+data.setCell(1, 3, 7304);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'run')
+data.setCell(2, 1, 'check')
 data.setCell(2, 2, 'TestClass.TestProp')
-data.setCell(2, 3, 3440);
+data.setCell(2, 3, 7070);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'run')
+data.setCell(3, 1, 'check')
 data.setCell(3, 2, 'TestClass.TestProp')
-data.setCell(3, 3, 2);
+data.setCell(3, 3, 6826);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'check')
+data.setCell(4, 1, 'run')
 data.setCell(4, 2, 'TestClass.TestProp')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 1469);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'check')
+data.setCell(5, 1, 'run')
 data.setCell(5, 2, 'TestClass.TestProp')
-data.setCell(5, 3, 0);
+data.setCell(5, 3, 1131);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -410,106 +323,82 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">TestClass.TestProp</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">browser(firefox)</span>
+              <div class="configuration-test before">
+                <span class="method-name">browser(safari)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
                 <span class="method-name">browser(chrome)</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">browser(safari)</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">214 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">browser(firefox)</span>
+                <span class="method-start">214 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">run</span>
-                <span class="method-start">25603 ms</span>
+                <span class="method-start">22641 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">run</span>
-                <span class="method-start">25603 ms</span>
+                <span class="method-start">28476 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">run</span>
+                <span class="method-start">28814 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@1bd4fdd...)</span>
-                <span class="method-start">29052 ms</span>
+                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@67c2749...)</span>
+                <span class="method-start">29950 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:1, instance:TestClass.TestProp@6cf0e0b...)</span>
-                <span class="method-start">29056 ms</span>
+                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@6356695...)</span>
+                <span class="method-start">29952 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
+                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@1b7cc17...)</span>
+                <span class="method-start">29958 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">check</span>
+                <span class="method-start">30280 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check</span>
+                <span class="method-start">30285 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check</span>
+                <span class="method-start">30345 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@67c...)</span>
+                <span class="method-start">37115 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">29266 ms</span>
+                <span class="method-start">37199 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-method after">
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@1b7...)</span>
+                <span class="method-start">37418 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">29312 ms</span>
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@635...)</span>
+                <span class="method-start">37669 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
+              <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">browser(safari)</span>
-                <span class="method-start">31538 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">browser(firefox)</span>
-                <span class="method-start">31538 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">run</span>
-                <span class="method-start">34148 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis</span>
-                <span class="method-start">34225 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">34228 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">browser</span>
-                <span class="method-start">34231 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">34233 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis</span>
-                <span class="method-start">34396 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
+                <span class="method-start">37742 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">34398 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">40096 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis</span>
-                <span class="method-start">40105 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">40110 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">49207 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:2, instance:TestClass.TestProp@6cf...)</span>
-                <span class="method-start">56485 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">56627 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">37790 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
