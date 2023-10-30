@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,21 +114,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="check">check</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="run">run</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="run">run</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClass.TestProp" class="method navigator-link" hash-for-method="run">run</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -170,27 +155,6 @@
                   <span class="method-name">check</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="run">
-                  </a> <!-- run -->
-                  <span class="method-name">run</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -202,28 +166,28 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;ExtentReportUtillity.ExtentListenerClass&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test Grammerly On Chrome&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test Grammerly On Chrome&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestClass.TestProp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Grammerly On Chrome --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test Grammerly On Safari&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test Grammerly On Safari&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;safari&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestClass.TestProp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test Grammerly On Safari --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test Grammerly On firefox&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;Test Grammerly On Firefox&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestClass.TestProp&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test Grammerly On firefox --&gt;
+  &lt;/test&gt; &lt;!-- Test Grammerly On Firefox --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,7 +205,7 @@
                 <span class="test-name">Test Grammerly On Safari (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Test Grammerly On firefox (1 class)</span>
+                <span class="test-name">Test Grammerly On Firefox (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -267,36 +231,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'check')
 data.setCell(0, 2, 'TestClass.TestProp')
-data.setCell(0, 3, 7385);
+data.setCell(0, 3, 9357);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'run')
+data.setCell(1, 1, 'check')
 data.setCell(1, 2, 'TestClass.TestProp')
-data.setCell(1, 3, 7304);
+data.setCell(1, 3, 9277);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'check')
 data.setCell(2, 2, 'TestClass.TestProp')
-data.setCell(2, 3, 7070);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'check')
-data.setCell(3, 2, 'TestClass.TestProp')
-data.setCell(3, 3, 6826);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'run')
-data.setCell(4, 2, 'TestClass.TestProp')
-data.setCell(4, 3, 1469);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'run')
-data.setCell(5, 2, 'TestClass.TestProp')
-data.setCell(5, 3, 1131);
+data.setCell(2, 3, 8767);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -324,80 +276,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestClass.TestProp</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">browser(safari)</span>
+                <span class="method-name">browser(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">check</span>
+                <span class="method-start">11056 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:0, instance:TestClass.TestProp@5ff...)</span>
+                <span class="method-start">20337 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">20489 ms</span>
+              </div> <!-- configuration-test after -->
               <div class="configuration-test before">
-                <span class="method-name">browser(chrome)</span>
-                <span class="method-start">214 ms</span>
+                <span class="method-name">browser(safari)</span>
+                <span class="method-start">29059 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">check</span>
+                <span class="method-start">41026 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:0, instance:TestClass.TestProp@959...)</span>
+                <span class="method-start">50387 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">50464 ms</span>
+              </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">browser(firefox)</span>
-                <span class="method-start">214 ms</span>
+                <span class="method-start">57850 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">run</span>
-                <span class="method-start">22641 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">run</span>
-                <span class="method-start">28476 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">run</span>
-                <span class="method-start">28814 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@67c2749...)</span>
-                <span class="method-start">29950 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@6356695...)</span>
-                <span class="method-start">29952 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=run status=SUCCESS method=TestProp.run()[pri:0, instance:TestClass.TestProp@1b7cc17...)</span>
-                <span class="method-start">29958 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
                 <span class="method-name">check</span>
-                <span class="method-start">30280 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">30285 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">check</span>
-                <span class="method-start">30345 ms</span>
+                <span class="method-start">70333 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@67c...)</span>
-                <span class="method-start">37115 ms</span>
+                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:0, instance:TestClass.TestProp@1b7...)</span>
+                <span class="method-start">79103 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">37199 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@1b7...)</span>
-                <span class="method-start">37418 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">getresultanalysis([TestResult name=check status=SUCCESS method=TestProp.check()[pri:1, instance:TestClass.TestProp@635...)</span>
-                <span class="method-start">37669 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">teardown</span>
-                <span class="method-start">37742 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">teardown</span>
-                <span class="method-start">37790 ms</span>
+                <span class="method-start">79300 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -18,11 +19,11 @@ import prpertyutility.propertyutils;
 import screenshotutility.ScreenShotUtility;
 public class BaseLibrary {
 	public static String urlpath=propertyutils.getreaddata("url","./testdata/config.properties");
-	static public WebDriver driver;
-	static public String browser;
+	static public WebDriver driver=null;
+	static public String browser=null;
 
 	@BeforeTest
-	@Parameters("browser")	
+	@Parameters("browser")
 	public  void browser(String browser) {
 		this.browser=browser;
  		if(browser.equals("chrome"))
@@ -45,8 +46,7 @@ public class BaseLibrary {
 			System.out.println("Please provide a proper browser value..");
 		}
  		driver.manage().window().maximize();
- 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
- 		
+ 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
  		driver.get(urlpath);
  	
 
@@ -65,21 +65,22 @@ System.out.println(result.getStatus());
 System.out.println(ITestResult.FAILURE);
 	if(result.isSuccess())
 	{
-		ScreenShotUtility.getscreenshot(driver,browser+"/"+"Passed",name);
+ 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		ScreenShotUtility.getscreenshot(driver,browser+ "-Passed",name);
 	}
 	else if(result.getStatus()==ITestResult.FAILURE)
-	{
-		ScreenShotUtility.getscreenshot(driver,browser+"/"+"Failed",name);
+	{ 		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		ScreenShotUtility.getscreenshot(driver,browser+ "-Failed",name);
 	}
 }
-@AfterTest()
-
+@AfterTest
 public void teardown() throws InterruptedException {
 	Thread.sleep(2000);
-	System.out.println(driver.getTitle());
-	//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-
+	System.out.println(driver.getTitle()+ " "+browser);
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     driver.quit();
+   
 }
 }
-

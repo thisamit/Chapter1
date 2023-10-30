@@ -4,8 +4,8 @@
   <listeners>
     <listener class-name="ExtentReportUtillity.ExtentListenerClass"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test Grammerly On Safari(failed)">
-    <parameter name="browser" value="safari"/>
+  <test thread-count="5" parallel="tests" name="Test Grammerly On Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="TestClass.TestProp">
         <methods>
@@ -16,18 +16,5 @@
         </methods>
       </class> <!-- TestClass.TestProp -->
     </classes>
-  </test> <!-- Test Grammerly On Safari(failed) -->
-  <test thread-count="5" parallel="tests" name="Test Grammerly On firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="TestClass.TestProp">
-        <methods>
-          <include name="teardown"/>
-          <include name="getresultanalysis"/>
-          <include name="browser"/>
-          <include name="check"/>
-        </methods>
-      </class> <!-- TestClass.TestProp -->
-    </classes>
-  </test> <!-- Test Grammerly On firefox(failed) -->
+  </test> <!-- Test Grammerly On Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
